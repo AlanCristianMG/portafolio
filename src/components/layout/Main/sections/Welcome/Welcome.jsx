@@ -38,6 +38,15 @@ function Welcome() {
     return () => clearTimeout(typingTimeout);
   }, [currentText, letterIndex, isDeleting, speed, words, wordIndex]);
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "../../../../../assets/docs/CV Alan Cristian Martinez Genaro.pdf";
+    link.download = "CV Alan Cristian Martinez Genaro.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className='Welcome'>
       <div className="welcome-text">
