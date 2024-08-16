@@ -1,0 +1,47 @@
+.Skills{
+    width: 100dvw;
+    /* background-color: aqua; */
+    color: var(--white);
+    margin: 2dvh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3dvh 0;
+    gap: 20px;
+    background-color: #020d17;
+}
+
+
+.icons-tech{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 40dvw;
+    padding: 4dvw;
+    /* background-color: blue; */
+}
+
+.icons-tech>img{
+    width: 50px;
+}
+
+@media(max-width:1024px) {
+    .excep{
+        width: 90dvw;
+        /* background-color: aqua; */
+        color: var(--white);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3dvw;
+        gap: 20px;
+    }
+    .icons-tech{
+        width: 70dvw;
+    }
+}

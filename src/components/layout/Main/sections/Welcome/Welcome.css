@@ -1,0 +1,101 @@
+.Welcome {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    width: 90dvw;
+    padding: 0% 0% 5% 0%;
+    color: var(--white);
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.w-tittle {
+    font-size: clamp(0.4rem, 1.9rem + 2.9vw, 5.9rem);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.w-name {
+    font-size: clamp(0.4rem, 1.9rem + 4.9vw, 5.9rem);
+    font-weight: bolder;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.w-buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10% auto ;
+}
+
+.animated-text {
+    font-size: clamp(0.2rem, 1.5rem + 1vw, 2rem);
+    margin-top: 10px;
+    font-family: "Silkscreen", sans-serif;
+    background-color: rgba(29, 25, 60, 0.516);
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: var(--white);
+    width: 2px;
+    height: 1.2em;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+.welcome-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: aqua; */
+    padding: 0;
+}
+.welcome-image>img{
+    width: 39dvw;
+    margin: 0;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@media(max-width:1024px) {
+    .Welcome{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "welcome-image" 
+            "welcome-text";
+    }
+    .welcome-text {
+        grid-area: welcome-text;
+        padding-left: 2dvw;
+        width: 80dvw;
+    }
+
+    .animated-text{
+        font-size: 6dvw;
+    }
+
+    .welcome-image{
+        grid-area: welcome-image;
+        width: 95dvw;
+        /* background-color: aqua; */
+    }
+    .welcome-image>img{
+        width: 95dvw;
+        margin: 0;
+    }
+
+}

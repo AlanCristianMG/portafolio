@@ -1,0 +1,119 @@
+.Education {
+    width: 90dvw;
+    /* background-color: aqua; */
+    color: var(--white);
+    margin: auto;
+}
+
+.section-tittle {
+    font-size: clamp(0.5rem, 2rem + 2.5vw, 5rem);
+}
+
+.content-e {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    /* grid-template-rows: auto;
+    grid-template-areas: 
+    "image-e" "info-e"; */
+
+}
+
+.image-e {
+    /* grid-area: image-e; */
+
+}
+
+.image-e>img {
+    width: 35dvw;
+}
+
+.info-e {
+
+    /* background-color: bisque; */
+    width: 85%;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.institute-info{
+    padding: 15px;
+}
+
+.institute-info:hover {
+    background: #23335a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848db, #4f7de935);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #14203acf, #4f7be43d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    border-radius: 16px;
+
+
+}
+
+.institute-section {
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    border-radius: 10px;
+
+}
+
+.institute-img>img {
+    margin: 10px 15px;
+    width: 5dvw;
+}
+
+.institute-name {
+    font-size: clamp(0.1rem, 1.2rem + 0.5dvw, 1.8rem);
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+
+@media(max-width:1024px) {
+
+    .Education {
+        width: 97dvw;
+    }
+
+    .section-tittle {
+        width: 90dvw;
+        margin: auto;
+    }
+
+    .content-e {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "info-e"
+            "image-e";
+
+    }
+
+    .image-e {
+        margin: auto;
+        grid-area: image-e;
+    }
+
+    .image-e>img {
+        width: 65dvw;
+    }
+
+    .info-e {
+        grid-area: info-e;
+        margin: 20px auto;
+        width: 90%;
+    }
+
+
+    .institute-img>img {
+        /* margin: 10px 15px; */
+        width: 15dvw;
+    }
+
+    .career-name,
+    .career-date,
+    .career-list>li {
+        font-size: 1rem;
+    }
+
+}

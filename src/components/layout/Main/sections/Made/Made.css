@@ -1,0 +1,40 @@
+.Made {
+    color: var(--white);
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 5% auto;
+    padding:15px;
+    align-items: center;
+    width: 50dvw;
+    background: #314755;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #183c8cb8, #314755a4);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #183c8cb8, #3147558f);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 16px;
+}
+
+.Made .text-made {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.Made .text-made p {
+    font-size: clamp(0.8rem, 1.2rem, 1.3rem);
+}
+
+.Made .react-animation {
+    margin: auto;
+    justify-content: center;
+}
+
+@media (max-width: 1040px) {
+    .Made {
+        width: 70dvw;
+    }
+    .text-made{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,203 @@
+header {
+    position: relative;
+    background-color: var(--primary-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    padding: 5px 5dvw;
+}
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logo menu social";
+}
+
+.logo {
+    grid-area: logo;
+    padding: 10px;
+}
+
+.logo img {
+    width: 15%;
+    max-width: 18%;
+    min-width: 55px;
+}
+.logo img:hover{
+    box-shadow: rgb(26, 4, 170) 0px 0px 0px 3px, rgb(85, 91, 255) 0px 0px 0px 6px, rgb(243, 243, 243) 0px 0px 0px 9px;
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+.menu ul {
+    display: flex;
+    width: 100%;
+    color: var(--white);
+    list-style: none;
+    justify-content: space-between;
+}
+
+.menu ul li {
+    transition: border-bottom 0.6s ease-in-out, background-color 0.6s ease-in-out, transform 0.3s ease;
+}
+
+.menu ul li:hover {
+    border-bottom: solid 1px var(--white);
+    /* background-color: black; */
+    cursor: pointer;
+    transform: scale(1.2); /* Añadir un ligero efecto de escala */
+    margin: 0 10px;
+}
+
+/* Opcional: Añadir un efecto de sombra al hover */
+.menu ul li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra al hover */
+}
+.menu a{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.social {
+    grid-area: social;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto 0;
+    
+    width: 100%;
+    /* background-color: blue; */
+}
+.social a{
+    margin: auto 10px;
+    height: 40px;
+}
+.social img {
+    width: 30px;
+}
+.social img:hover {
+    transform: translateY(-10px);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+}
+
+/* Media Queries */
+@media (max-width: 1040px) {
+    .menu {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+        width: 98%;
+        height: 50px;
+        text-align: center;
+    }
+    .menu ul li:hover {
+        border: none;
+    }
+
+    .hamburger {
+        display: flex;
+        position: fixed;
+        z-index: 91;
+        right: 0;
+        top: 1;
+        padding: 1% 5% 0 0;
+        background-color: transparent;
+    }
+
+    .menu.active {
+        display: flex;
+        position: fixed;
+        top: 11vh;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        z-index: 99;
+        padding: 2% 0;
+        border-top: solid 2px var(--secondary-color);
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu.active a {
+        display: flex;
+        left: 0;
+        right: 0;
+        width: 94%;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .social {
+        display: none;
+        position: fixed;
+        z-index: 91;
+        width: 100%;
+        left: 0;
+        right: 0;
+        height: 10%;
+        justify-content: center;
+    }
+
+    .menu.active+.social {
+        display: flex;
+    }
+    .social a img{
+        width: 20px;
+    }
+    .logo img{
+        width: 10%;
+    }
+}

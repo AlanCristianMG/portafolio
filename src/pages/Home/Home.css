@@ -1,0 +1,6 @@
+.Home {
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}

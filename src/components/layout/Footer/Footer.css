@@ -1,0 +1,179 @@
+footer {
+    background-color: var(--gray);
+    padding: 10px 30px 0 30px;
+    color: var(--white);
+    /* width: 99dvw; */
+}
+
+/* Estilos del contenedor del pie de página */
+.footer {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1.2fr);
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    grid-template-areas:
+        "about links links form"
+        "about links links form"
+        "rights rights rights rights";
+    box-sizing: border-box;
+}
+
+/* Estilos para la sección "about" */
+.about {
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.about img {
+    width: 30px;
+    margin: 0 20px;
+}
+
+.about .social-f {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 10px 0;
+}
+
+/* Estilos para la sección "links" */
+.links {
+    grid-area: links;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: bisque; */
+}
+
+.links .link-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.links .link-section h4 {
+    margin-bottom: 0px;
+}
+
+.links .general-l {
+    /* background-color: aquamarine; */
+    padding: 0px;
+}
+
+.links .contact-l {
+    /* background-color: blue; */
+    padding: 0px;
+}
+
+/* Estilos para la sección "form" */
+.form {
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.form input, .form textarea, .form button{
+    border-radius: 6px;
+}
+.form input{
+    height: 30px;
+}
+
+.form textarea{
+    resize: none;
+    field-sizing: content;
+    min-height: 70px;
+
+}
+
+/* Estilos para la sección "rights" */
+.rights {
+    grid-area: rights;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-align: center;
+    height: 55px;
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 1040px) {
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 0.2fr;
+        gap: 0px;
+        grid-template-areas:
+            "about"
+            "links"
+            "form"
+            "rights";
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .about, .links, .form, .rights {
+        padding: 0px;
+        text-align: center;
+    }
+    .about p{
+        height: 20px;
+        font-size: 0.9rem;
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+    }
+    .links h5{
+        padding: 0;
+        align-self: center;
+    }
+    .links .link-section {
+        width: 50%;
+        margin-bottom: 0px;
+        padding: 0;
+        text-align: justify;
+    }
+    .form form{
+        display: flex;
+        justify-content: center;
+        padding: 0 10%;
+        
+    }
+    .form form input{
+        height: 30px;
+        max-width: 80%;
+        margin: 0 10%;
+    }
+    .form form button{
+        height: 50px;
+    }
+    
+
+}
+
+@media (max-width: 580px) {
+    .form form input{
+        max-width: 100%;
+        margin: 0 0;
+    }
+    .about p{
+        height: 20px;
+        font-size: 0.8em;
+    }
+}
