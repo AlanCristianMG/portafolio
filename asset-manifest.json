@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/portafolio/static/css/main.5cf8a42a.css",
-    "main.js": "/portafolio/static/js/main.2bb03429.js",
+    "main.js": "/portafolio/static/js/main.bc3c752a.js",
     "static/js/453.7d1ffe6d.chunk.js": "/portafolio/static/js/453.7d1ffe6d.chunk.js",
     "static/media/avatar.webp": "/portafolio/static/media/avatar.2042c9078884b6dcae53.webp",
     "static/media/NotoSans-Regular.ttf": "/portafolio/static/media/NotoSans-Regular.e49f7cc81283eef694a3.ttf",
     "static/media/SOLAR SPACE DEMO.ttf": "/portafolio/static/media/SOLAR SPACE DEMO.a1cf326ba1173494a511.ttf",
     "static/media/cecytem-logo.png": "/portafolio/static/media/cecytem-logo.15128e2d8519dc46d4b3.png",
+    "static/media/cv.pdf": "/portafolio/static/media/cv.b89fc3c6ac23735d59f7.pdf",
     "static/media/logo_white.png": "/portafolio/static/media/logo_white.e5367ec8e31d4ac26702.png",
     "static/media/Suntage.ttf": "/portafolio/static/media/Suntage.21f493f63138f7c27fec.ttf",
     "static/media/education.png": "/portafolio/static/media/education.d919df78575000b7ac10.png",
@@ -26,11 +27,11 @@
     "index.html": "/portafolio/index.html",
     "static/media/html5.svg": "/portafolio/static/media/html5.8664168d5bc90b1a24396f85aadbf623.svg",
     "main.5cf8a42a.css.map": "/portafolio/static/css/main.5cf8a42a.css.map",
-    "main.2bb03429.js.map": "/portafolio/static/js/main.2bb03429.js.map",
+    "main.bc3c752a.js.map": "/portafolio/static/js/main.bc3c752a.js.map",
     "453.7d1ffe6d.chunk.js.map": "/portafolio/static/js/453.7d1ffe6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5cf8a42a.css",
-    "static/js/main.2bb03429.js"
+    "static/js/main.bc3c752a.js"
   ]
 }
