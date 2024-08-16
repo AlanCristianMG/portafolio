@@ -1,8 +1,8 @@
 import React from 'react'
 import './glitchButton.css'
-function GlitchButton({text}) {
+function GlitchButton({text, onclick}) {
     return (
-        <button className='button-g'>
+        <button onClick={onclick} className='button-g'>
             {text}
         </button>
     )

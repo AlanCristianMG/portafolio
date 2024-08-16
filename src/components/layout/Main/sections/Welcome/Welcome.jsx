@@ -3,6 +3,7 @@ import './Welcome.css';
 import Orbit from '../../../../common/Others/Orbit/Orbit';
 import GlitchButton from '../../../../common/Buttons/glitchButton/GlitchButton';
 import avatar from '../../../../../assets/img/avatar.webp'
+import cv from '../../../../../assets/docs/cv.pdf'
 
 function Welcome() {
   const words = ["a Software Engineer", "a Web Developer", "a Tech Enthusiast", "a Problem Solver"];
@@ -40,7 +41,7 @@ function Welcome() {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "../../../../../assets/docs/CV Alan Cristian Martinez Genaro.pdf";
+    link.href = cv;
     link.download = "CV Alan Cristian Martinez Genaro.pdf";
     document.body.appendChild(link);
     link.click();
@@ -57,7 +58,7 @@ function Welcome() {
           <span className="cursor">|</span>
         </div>
         <div className="w-buttons">
-          <GlitchButton text={"Download CV"} />
+          <GlitchButton text={"Download CV"} onclick={handleDownload}/>
         </div>
       </div>
       <div className="welcome-image">
