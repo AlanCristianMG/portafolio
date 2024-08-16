@@ -52,6 +52,16 @@ const Header = () => {
     };
   }, []);
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("martinezgenarocristian@gmail.com")
+      .then(() => {
+        alert('Correo copiado!');
+      })
+      .catch(err => {
+        console.error('Error al copiar correo:', err);
+      });
+  }
+
   return (
     <header className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInLeft animate__delay-0.5s'}>
       <div className="navbar">
@@ -65,10 +75,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="social">
-          <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-1s'} href="#"><img src={Linkedin} alt="Linkedin" /></a>
-          <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-2s'} href="#"><img src={Github} alt="Github" /></a>
+          <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-1s'} target="_blank" href="https://www.linkedin.com/in/alan-cristian-martinez-genaro-103322311"><img src={Linkedin} alt="Linkedin" /></a>
+          <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-2s'} target="_blank" href="https://github.com/AlanCristianMG"><img src={Github} alt="Github" /></a>
           <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-3s'} href="#"><img src={Facebook} alt="Facebook" /></a>
-          <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-4s'} href="#"><img src={Gmail} alt="Gmail" /></a>
+          <a className={animationEnded || !enableAnimations ? '' : 'animate__animated animate__bounceInRight animate__delay-4s'} href="#" onclick={copyToClipboard}><img onClick={copyToClipboard} src={Gmail} alt="Gmail" /></a>
         </div>
         <div className="hamburger" onClick={toggleMenu}>
           <span></span>
