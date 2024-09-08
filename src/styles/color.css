@@ -1,6 +1,6 @@
-:root{
-    --primary-color: #030f1a;
-    --secondary-color: #243746;
-    --white: #ebf4f1;
-    --gray: #1c1b1b;
+:root {
+    --primary-color: rgba(3, 15, 26, 1);  /* #030f1a */
+    --secondary-color: rgba(36, 55, 70, 1);  /* #243746 */
+    --white: rgba(235, 244, 241, 1);  /* #ebf4f1 */
+    --gray: rgba(28, 27, 27, 1);  /* #1c1b1b */
 }

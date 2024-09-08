@@ -1,47 +1,106 @@
-.Skills{
-    width: 100dvw;
-    /* background-color: aqua; */
+.Skills {
+    width: 100vw;
     color: var(--white);
-    margin: 2dvh auto;
+    margin: 2vh auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3dvh 0;
-    gap: 20px;
+    padding: 3vh 0 15vh 0;
+    gap: 35px;
     background-color: #020d17;
 }
 
+.icons-tech {
+    width: 85vw;
+    padding: 4dvh 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: rgba(66, 66, 120, 0.4) 0px -35px 45px -12px inset, rgba(0, 0, 0, 0.1) 0px -18px 36px -18px inset;
 
-.icons-tech{
+}
+
+.icons-tech::before,
+.icons-tech::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    pointer-events: none;
+    /* Evita que interfiera con la interacción */
+    z-index: 10;
+    /* Coloca el desvanecimiento por encima del contenido */
+}
+
+.icons-tech::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(2, 13, 23, 1), rgba(255, 255, 255, 0));
+}
+
+.icons-tech::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(2, 13, 23, 1), rgba(255, 255, 255, 0));
+}
+
+
+.scroll-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 40dvw;
-    padding: 4dvw;
-    /* background-color: blue; */
+    justify-content: flex-start;
+    width: 200%;
 }
 
-.icons-tech>img{
-    width: 50px;
+.scroll-content {
+    display: flex;
+    gap: 65px;
+    animation: scroll 15s linear infinite;
+    width: 200vw;
 }
 
-@media(max-width:1024px) {
-    .excep{
-        width: 90dvw;
-        /* background-color: aqua; */
+.scroll-content img {
+    width: 65px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Mover solo el 50% para que se repita */
+    }
+}
+
+@media (max-width: 1024px) {
+    .excep {
+        width: 90vw;
         color: var(--white);
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 3dvw;
+        padding: 3vw;
         gap: 20px;
     }
+
+    .scroll-content {
+        gap: 35px;
+        width: 550vw;
+        animation-duration: 10s;
+    }
+
+    .scroll-content img {
+        width: 60px;
+    }
     .icons-tech{
-        width: 70dvw;
+        box-shadow: rgba(66, 66, 120, 0.3) 0px -35px 55px -12px inset, rgba(0, 0, 0, 0.1) 0px -18px 36px -18px inset;
+    }
+    .icons-tech::before,
+    .icons-tech::after {
+        width: 35px;
     }
 }
